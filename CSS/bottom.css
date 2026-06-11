@@ -1,0 +1,131 @@
+.bottomDivider {
+    width: 97%;
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.aboutDivider {
+    font-family: "Mexicanero", serif;
+    font-size: clamp(0.8rem, 3.5vw, 1.2rem);
+    font-variant: small-caps;
+    font-weight: 200;
+    margin: 0;
+    line-height: 0.8;
+    white-space: nowrap;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #D4C3AA;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bottom Section */
+.bottomSection {
+    width: 97%;
+    min-height: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    display: grid;
+    grid-template-columns: 30% 40% auto;
+    grid-template-rows: 30% 40% auto;
+    grid-template-areas: 
+        "pic description box"
+        "pic description box2"
+        "footer footer box2";
+
+    /* border-style: solid;
+    border-width: 2px;
+    border-color: white; */
+}
+
+.aboutPicBox {
+    grid-area: pic;
+    width: auto;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.aboutPic {
+    grid-area: pic;
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+}
+
+.aboutDescription {
+    grid-area: description;
+    width: auto;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+
+    background-color: #f8f1e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}
+
+.bottomAboutDivider {
+    grid-area: box;
+    width: auto;
+    height: 100%;
+    border-radius: 0px 0px 20px 20px;
+
+    background-color: #D4C3AA;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}
+
+.topFooterDivider {
+    grid-area: box2;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+
+    background-color: #D4C3AA;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}
+
+footer {
+    grid-area: footer;
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+
+    background-color: #D4C3AA;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}

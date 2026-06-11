@@ -150,6 +150,7 @@
 }
 
 .bottomZoomPicture {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,4 +161,22 @@
     height: 25%;
 
     background-color: #D4C3AA;
+}
+
+.bottomZoomPicture::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: -20px;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: transparent;
+    border-top-left-radius: 20px;
+
+    box-shadow: -15px -15px 0 15px #D4C3AA;
+
+    transform: scale(-1);
 }
