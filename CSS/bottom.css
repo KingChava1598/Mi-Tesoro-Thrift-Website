@@ -1,5 +1,5 @@
 .bottomDivider {
-    width: 97%;
+    width: 85%;
     min-height: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -8,7 +8,7 @@
 
 .aboutDivider {
     font-family: "Mexicanero", serif;
-    font-size: clamp(0.8rem, 3.5vw, 1.2rem);
+    font-size: 120%;
     font-variant: small-caps;
     font-weight: 200;
     margin: 0;
@@ -22,13 +22,14 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    text-wrap-mode: wrap;
 }
 
 /* Bottom Section */
 .bottomSection {
-    width: 97%;
+    width: 85%;
     min-height: 840px;
     margin-left: auto;
     margin-right: auto;
@@ -42,10 +43,6 @@
         "pic description box"
         "pic description box2"
         "footer footer box2";
-
-    /* border-style: solid;
-    border-width: 2px;
-    border-color: white; */
 }
 
 .aboutPicBox {
@@ -55,14 +52,14 @@
     margin-top: 20px;
     border-radius: 20px;
 
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
 }
 
 .aboutPic {
@@ -84,13 +81,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
+    flex-direction: column;
 }
 
 .bottomAboutDivider {
+    position: relative;
     grid-area: box;
     width: auto;
     height: 100%;
@@ -98,9 +93,24 @@
 
     background-color: #D4C3AA;
 
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
+}
+
+.bottomAboutDivider::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -20px;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: transparent;
+    border-top-left-radius: 20px;
+
+    box-shadow: -15px -15px 0 15px #D4C3AA;
+
+    transform: scaleX(-1);
 }
 
 .topFooterDivider {
@@ -110,10 +120,6 @@
     border-radius: 20px;
 
     background-color: #D4C3AA;
-
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
 }
 
 footer {
@@ -125,7 +131,7 @@ footer {
 
     background-color: #D4C3AA;
 
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

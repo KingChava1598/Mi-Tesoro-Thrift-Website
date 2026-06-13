@@ -5,7 +5,7 @@ html {
 
 /* Header section */
 .headerBox {
-    width: 97%;
+    width: 85%;
     min-height: clamp(150px, 13vw, 230px);
     margin-left: auto;
     margin-right: auto;
@@ -55,41 +55,38 @@ html {
 
 /* Intro Section */
 .topLayout {
-    width: 97%;
+    width: 85%;
+    min-height: 440px;
     margin-left: auto;
     margin-right: auto;
 
     display: grid;
-    grid-template-columns: 320px auto;
-    align-items: start;
-}
-
-.leftSide {
-    height: 420px;
-    display: grid;
-    grid-template-rows: 270px auto;
-}
-
-.underHeader {
-    display: grid;
-    grid-template-columns: 100px 100px;
+    grid-template-columns: 100px 15% auto;
+    grid-template-rows: 60% auto;
+    grid-template-areas: 
+        "icons buffer pic"
+        "box box pic";
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
 .underBox {
     position: relative;
+    grid-area: icons;
 
     background-color: #D4C3AA;
-    min-height: 250px;
-    width: 80px;
+    height: 100%;
+    width: 100%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    margin-bottom: 20px;
     
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 5%;
+
+    z-index: 1;
 }
 
 .underBox::after {
@@ -106,9 +103,12 @@ html {
     border-top-left-radius: 20px;
 
     box-shadow: -15px -15px 0 15px #D4C3AA;
+    z-index: 1;
 }
 
 .iconsPictures {
+    grid-area: icons;
+
     width: 40px;
     height: 40px;
 
@@ -142,7 +142,7 @@ html {
 .facebook {
     width: 40px;
     height: 40px;
-    object-fit: contain;
+    object-fit: fill;
 }
 
 .ebay {
@@ -157,12 +157,13 @@ html {
 }
 
 .topsmallQuoteBox {
+    grid-area: buffer;
+
     position: relative;
 
     background-color: #f8f1e4;
-    max-height: 550px;
-    margin-left: auto;
-    width: 200px;
+    height: 100%;
+    width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     margin-top: 20px;
@@ -170,6 +171,31 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    line-height: 1.1;
+}
+
+.open {
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.week {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    text-align:left;
+    font-size: 90%;
 }
 
 .topsmallQuoteBox::after {
@@ -191,7 +217,9 @@ html {
 }
 
 .smallQuoteBox {
-    width: 300px;
+    grid-area: box;
+
+    width: 100%;
     margin-bottom: 0px;
     background-color: #f8f1e4;
     border-radius: 20px 0 20px 20px;
@@ -199,9 +227,14 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    font-size: 150%;
+    line-height: 0;
 }
 
 .pictureSection {
+    grid-area: pic;
     min-height: 400px;
     max-height: 800px;
     background-color: transparent;
@@ -220,5 +253,29 @@ html {
     max-height: 800px;
 
     object-fit: fill;
+}
+
+.linesTop {
+    height: 3px;
+    width: 80%;
+    background-color: #EBB261;
+    border-radius: 2px;
+    box-shadow: 1px 4px 6px black;
+    margin-top: auto;
+    margin-bottom: 10px;
+
+    z-index: 2;
+}
+
+.linesBottom {
+    height: 3px;
+    width: 80%;
+    background-color: #EBB261;
+    border-radius: 2px;
+    box-shadow: 1px 4px 6px black;
+    margin-top: 10px;
+    margin-bottom: auto;
+
+    z-index: 2;
 }
 

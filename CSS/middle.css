@@ -1,5 +1,5 @@
 .middleDivider {
-    width: 97%;
+    width: 85%;
     min-height: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -8,7 +8,7 @@
 
 .picturesDivider {
     font-family: "Mexicanero", serif;
-    font-size: clamp(0.8rem, 3.5vw, 1.2rem);
+    font-size: 120%;
     font-variant: small-caps;
     font-weight: 200;
     margin: 0;
@@ -24,6 +24,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    text-wrap-mode: wrap;
 }
 
 .heart {
@@ -32,7 +33,7 @@
 
 /* Middle Section */
 .middleSection {
-    width: 97%;
+    width: 85%;
     max-height: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -103,6 +104,8 @@
     border-radius: 0px 0px 20px 20px;
 
     background-color: #D4C3AA;  
+
+    z-index: 1;
 }
 
 .zoomPicture::after {
@@ -121,6 +124,8 @@
     box-shadow: -15px -15px 0 15px #D4C3AA;
 
     transform: scaleX(-1);
+
+    z-index: 1;
 }
 
 .zoomPic {
@@ -179,4 +184,11 @@
     box-shadow: -15px -15px 0 15px #D4C3AA;
 
     transform: scale(-1);
+}
+
+.feyCreativesLink {
+    padding-top: 25px;
+    padding-bottom: 10px;
+
+    z-index: 2;
 }
