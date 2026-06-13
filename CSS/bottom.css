@@ -92,6 +92,14 @@
     flex-direction: column;
 }
 
+.aboutDescriptionBox {
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .bottomAboutDivider {
     position: relative;
     grid-area: box;
