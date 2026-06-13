@@ -3,6 +3,14 @@ html {
     background-attachment: fixed;
 }
 
+.mobileTopLayout {
+    display: none;
+}
+
+.desktopTopLayout {
+    display: block;
+}
+
 /* Header section */
 .headerBox {
     width: 85%;

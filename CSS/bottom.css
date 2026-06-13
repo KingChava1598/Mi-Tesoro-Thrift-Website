@@ -1,3 +1,11 @@
+.mobileBottomLayout {
+    display: none;
+}
+
+.desktopBottomLayout {
+    display: block;
+}
+
 .bottomDivider {
     width: 85%;
     min-height: 50px;

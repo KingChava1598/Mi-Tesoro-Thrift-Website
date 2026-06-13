@@ -1,0 +1,343 @@
+@media (max-width: 768px) {
+    .mobileTopLayout {
+        display: block;
+    }
+
+    .mobileMiddleLayout {
+        display: block;
+    }
+
+    .mobileBottomLayout {
+        display: block;
+    }
+
+    .desktopTopLayout {
+        display: none;
+    }
+
+    .desktopMiddleLayout {
+        display: none;
+    }
+
+    .desktopBottomLayout {
+        display: none;
+    }
+
+    html {
+        background: linear-gradient(to bottom, #522626 0%, #431818 30%, #1C0A0A 70%);
+        background-attachment: fixed;
+        padding-bottom: 20px;
+    }
+
+    /* Mobile Header Section */
+    .mobileHeaderBox {
+        width: 100%;
+        min-height: clamp(150px, 13vw, 230px);
+        margin-left: auto;
+        margin-right: auto;
+
+        background-color: #D4C3AA;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        overflow: hidden;
+        padding: 20px 0 18px;
+    }
+
+    .mobileLogoText {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        transform: translateY(6px);
+    }
+
+    .mobileTitle {
+        font-family: "Mexicanero", serif;
+        font-size: clamp(4.5rem, 10vw, 8rem);
+        font-variant: small-caps;
+        font-weight: 400;
+
+        margin: 0;
+        line-height: 0.8;
+        white-space: nowrap;
+    }
+
+    .mobileUnderTitle {
+        font-family: "Mexicanero", serif;
+        font-size: clamp(1.8rem, 3.5vw, 3rem);
+        font-weight: 400;
+
+        margin: 0;
+        line-height: 1;
+        text-align: right;
+    }
+
+    .socialBar {
+        background-color: #D4C3AA;
+        height: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding-bottom: 20px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 10%;
+    }
+
+    .mobilePictureSection {
+        width: 100%;
+        height: 30%;
+        background-color: transparent;
+        border-radius: 20px 20px 0px 0px;
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .mobileOpeningLayout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-bottom: 20px;
+
+        background-color: #D4C3AA;
+    }
+
+    .mobileOpen {
+        width: 100%;
+        height: auto;
+        text-align: center;
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .mobileWeek {
+        width: auto;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        text-align:left;
+        font-size: 90%;
+    }
+
+    .mobileOpening {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mobileLinesTop {
+        height: 3px;
+        width: 80%;
+        background-color: #EBB261;
+        border-radius: 2px;
+        box-shadow: 1px 4px 6px black;
+        margin-top: auto;
+        margin-bottom: 10px;
+
+        z-index: 2;
+    }
+
+    .mobileLinesBottom {
+        height: 3px;
+        width: 80%;
+        background-color: #EBB261;
+        border-radius: 2px;
+        box-shadow: 1px 4px 6px black;
+        margin-top: 10px;
+        margin-bottom: auto;
+
+        z-index: 2;
+    }
+
+    /* Mobile Pictures Section */
+    .mobilePicturesDivider {
+        width: 100%;
+        background-color: #D4C3AA;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding-top: 10px ;
+
+        font-size: 80%;
+        margin: 0;
+        line-height: 0.8;
+    }
+
+    .mobilePicturesAlbum {
+        width: 100%;
+        height: auto;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-bottom: 20px;
+
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mobilePictureBoxes {
+        flex: 0 0 75%;
+        height: 260px;
+
+        border-radius: 20px;
+        scroll-snap-align: center;
+    }
+
+    .mobilePictureVariant {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        cursor: pointer;
+    }
+
+    .picturePopup {
+        position: fixed;
+        inset: 0;
+
+        background-color: rgba(0, 0, 0, 0.75);
+
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 9999;
+        padding: 20px;
+    }
+
+    .picturePopup.active {
+        display: flex;
+    }
+
+    .popupContent {
+        position: relative;
+
+        width: 100%;
+        max-height: 70%;
+
+        background-color: #D4C3AA;
+        border-radius: 20px;
+        padding: 40px 20px 20px 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .popupImage {
+        width: 100%;
+        max-height: 100%;
+
+        object-fit: fill;
+        border-radius: 20px;
+        border: 2px solid black;
+    }
+
+    .popupDescription {
+        margin: 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .closePopup {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        width: 35px;
+        height: 35px;
+
+        border: none;
+        background-color: transparent;
+        color: white;
+
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Mobile About Section */
+    .mobileAboutDivider {
+        width: 100%;
+        background-color: #D4C3AA;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+
+        font-size: 90%;
+        margin: 0;
+        line-height: 0.8;
+    }
+
+    .mobileAboutPicBox {
+        width: 100%;
+        height: 400px;
+        display: flex;
+    }
+
+    .mobileAboutPic {
+        width: 100%;
+        height: 100%;
+
+        object-fit: fill;
+    }
+
+    .mobileAboutDescription {
+        width: 100%;
+        height: 500px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #f8f1e4;
+    }
+
+    .mobileAboutDescriptionText {
+        height: 400px;
+        display: flex;
+        align-items: center;
+    }
+}
